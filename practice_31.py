@@ -48,18 +48,19 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         print("[공중 유닛 이동]")
         self.fly(self.name, location)
 
-#발키리 : 공중 공격 유닛, 한번에 14발 미사일 발사.
-valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
-valkyrie.fly(valkyrie.name, "3시")
+# 건물
+class BuildingUnit(Unit):
+    def __init__(self, name, hp, location):
+        pass #아무것도 안하고 그냥 넘어감, 완성되어 있는 것처럼 보임
 
-#오버라이딩 (자식 클래스에서 정의한 메소드를 쓰고 싶을 때, 메소드를 새롭게 정의해서 사용)
+# 서플라이 디폿 : 건물, 1개 건물 = 8 유닛
+supply_depot = BuildingUnit("서플라이 디폿", 500, "7시")
 
-#벌쳐 : 지상 유닛, 기동성이 좋음
-vulture = AttackUnit("벌쳐", 80, 10, 20)
+def game_start():
+    print("[알림] 새로운 게임을 시작합니다.")
 
-# 배틀크루저 : 공중 유닛
-battlecruiser = FlyableAttackUnit("배틀크루저", 500, 25, 3)
+def game_over():
+    pass
 
-vulture.move("11시")
-battlecruiser.fly(battlecruiser.name, "9시")
-battlecruiser.move("9시")
+game_start()
+game_over()
