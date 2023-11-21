@@ -41,4 +41,5 @@ class FlyableAttackUnit(AttackUnit, Flyable):
 #발키리 : 공중 공격 유닛, 한번에 14발 미사일 발사.
 valkyrie = FlyableAttackUnit("발키리", 200, 6, 5)
 valkyrie.fly(valkyrie.name, "3시")
-valkyrie.damaged(25)
+
+#오버라이딩 (자식 클래스에서 정의한 메소드를 쓰고 싶을 때, 메소드를 새롭게 정의해서 사용)

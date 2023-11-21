@@ -47,7 +47,7 @@ print("유닛 이름 : {0}, 공격력 : {1}".format(wraith1.name, wraith1.damage
 
 # 마인드 컨트롤
 wraith2 = Unit("레이스", 80, 5)
-wraith2.clocking = True
+wraith2.clocking = True # 클로킹이란 변수가 없음, 추가로 할당 가능 외부에서 만들어서 사용 가능
 
 if wraith2.clocking == True:
     print("{0} 는 현재 클로킹 상태입니다.".format(wraith2.name))
