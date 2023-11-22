@@ -13,5 +13,11 @@ trip_to.detail()
 
 # *을 쓸 때 공개와 비공개 설정이 필요함 __all__ = ["vietnam"]
 from travel import *
-trip_to = vietnam.VietnamPackage()
-trip_to.detail()
+# trip_to = vietnam.VietnamPackage()
+# trip_to = thailand.ThailandPackage()
+# trip_to.detail()
+
+import inspect
+import random
+print(inspect.getfile(random))
+print(inspect.getfile(thailand))
